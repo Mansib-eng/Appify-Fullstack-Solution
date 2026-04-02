@@ -9,6 +9,7 @@ export default function LoginForm() {
     email: "",
     password: "",
   });
+  const [showPassword, setShowPassword] = useState(false);
   const [error, setError] = useState("");
   const [loading, setLoading] = useState(false);
 
@@ -69,14 +70,33 @@ export default function LoginForm() {
         <div className="col-12">
           <div className="_social_login_form_input _mar_b14">
             <label className="_social_login_label _mar_b8">Password</label>
-            <input
-              type="password"
-              name="password"
-              className="form-control _social_login_input"
-              value={form.password}
-              onChange={updateField}
-              required
-            />
+            <div style={{ position: "relative" }}>
+              <input
+                type={showPassword ? "text" : "password"}
+                name="password"
+                className="form-control _social_login_input"
+                value={form.password}
+                onChange={updateField}
+                required
+              />
+              <button
+                type="button"
+                onClick={() => setShowPassword(!showPassword)}
+                style={{
+                  position: "absolute",
+                  right: "10px",
+                  top: "50%",
+                  transform: "translateY(-50%)",
+                  background: "none",
+                  border: "none",
+                  cursor: "pointer",
+                  fontSize: "18px",
+                  color: "#666",
+                }}
+              >
+                {showPassword ? "👁️" : "👁️‍🗨️"}
+              </button>
+            </div>
           </div>
         </div>
       </div>

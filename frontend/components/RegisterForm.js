@@ -12,6 +12,9 @@ export default function RegisterForm() {
     password: "",
     confirmPassword: "",
   });
+  const [termsAgreed, setTermsAgreed] = useState(false);
+  const [showPassword, setShowPassword] = useState(false);
+  const [showConfirmPassword, setShowConfirmPassword] = useState(false);
   const [error, setError] = useState("");
   const [loading, setLoading] = useState(false);
 
@@ -25,6 +28,11 @@ export default function RegisterForm() {
   async function handleSubmit(event) {
     event.preventDefault();
     setError("");
+
+    if (!termsAgreed) {
+      setError("You must agree to the terms & conditions to register.");
+      return;
+    }
 
     if (form.password !== form.confirmPassword) {
       setError("Password and repeat password must match.");
@@ -105,28 +113,66 @@ export default function RegisterForm() {
         <div className="col-12">
           <div className="_social_registration_form_input _mar_b14">
             <label className="_social_registration_label _mar_b8">Password</label>
-            <input
-              type="password"
-              name="password"
-              className="form-control _social_registration_input"
-              value={form.password}
-              onChange={updateField}
-              required
-            />
+            <div style={{ position: "relative" }}>
+              <input
+                type={showPassword ? "text" : "password"}
+                name="password"
+                className="form-control _social_registration_input"
+                value={form.password}
+                onChange={updateField}
+                required
+              />
+              <button
+                type="button"
+                onClick={() => setShowPassword(!showPassword)}
+                style={{
+                  position: "absolute",
+                  right: "10px",
+                  top: "50%",
+                  transform: "translateY(-50%)",
+                  background: "none",
+                  border: "none",
+                  cursor: "pointer",
+                  fontSize: "18px",
+                  color: "#666",
+                }}
+              >
+                {showPassword ? "👁️" : "👁️‍🗨️"}
+              </button>
+            </div>
           </div>
         </div>
 
         <div className="col-12">
           <div className="_social_registration_form_input _mar_b14">
             <label className="_social_registration_label _mar_b8">Repeat Password</label>
-            <input
-              type="password"
-              name="confirmPassword"
-              className="form-control _social_registration_input"
-              value={form.confirmPassword}
-              onChange={updateField}
-              required
-            />
+            <div style={{ position: "relative" }}>
+              <input
+                type={showConfirmPassword ? "text" : "password"}
+                name="confirmPassword"
+                className="form-control _social_registration_input"
+                value={form.confirmPassword}
+                onChange={updateField}
+                required
+              />
+              <button
+                type="button"
+                onClick={() => setShowConfirmPassword(!showConfirmPassword)}
+                style={{
+                  position: "absolute",
+                  right: "10px",
+                  top: "50%",
+                  transform: "translateY(-50%)",
+                  background: "none",
+                  border: "none",
+                  cursor: "pointer",
+                  fontSize: "18px",
+                  color: "#666",
+                }}
+              >
+                {showConfirmPassword ? "👁️" : "👁️‍🗨️"}
+              </button>
+            </div>
           </div>
         </div>
       </div>
@@ -138,7 +184,8 @@ export default function RegisterForm() {
               className="form-check-input _social_registration_form_check_input"
               type="checkbox"
               id="terms"
-              defaultChecked
+              checked={termsAgreed}
+              onChange={(e) => setTermsAgreed(e.target.checked)}
               required
             />
             <label className="form-check-label _social_registration_form_check_label" htmlFor="terms">
