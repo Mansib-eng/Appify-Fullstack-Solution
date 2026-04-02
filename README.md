@@ -49,7 +49,7 @@ Express was chosen for its simplicity and flexibility in handling authentication
 MongoDB fits this task well because posts, comments, replies, likes, and user data can be modeled efficiently with flexible schemas.
 
 ### 4. JWT-based authentication
-JWT authentication was used to secure protected routes and API access. This keeps the authentication flow simple and suitable for a separately deployed frontend and backend.
+JWT authentication was used to secure protected routes and API access. This keeps the authentication flow simple and suitable for a separately deployed frontend and backend. The frontend uses Next.js API proxy routes and a cookie-based token handoff to call the backend securely without exposing the backend directly to browser-side authentication logic.
 
 ### 5. Single comment model for comments and replies
 Replies are handled through the same comment collection using a parentComment field. This reduces duplication and keeps the comment/reply logic simpler.
@@ -141,6 +141,7 @@ Use **MongoDB Atlas** free tier for the database.
 
 ## Notes / Trade-offs
 - The implementation focuses on the required task features only
+- For this task, uploaded images are stored in MongoDB for simplicity and to stay within the selected free-tier stack.
 - Feed design was kept close to the supplied assets, while feed functionality was prioritized as allowed by the task
 - Pagination and indexing were added to better align the solution with scalability expectations
 
