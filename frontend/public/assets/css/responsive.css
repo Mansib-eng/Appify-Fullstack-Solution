@@ -1,4 +1,242 @@
+/* =========================
+   Appifylab responsive polish
+   ========================= */
 
+@media (max-width: 991px) {
+  ._social_login_left,
+  ._social_registration_right {
+    text-align: center;
+    margin-bottom: 24px;
+  }
+
+    ._layout._layout_main_wrapper {
+        padding-top: 76px !important;
+    }
+
+    ._header_nav {
+        padding: 10px 0 !important;
+    }
+
+    ._header_nav ._custom_container {
+        flex-wrap: wrap;
+        gap: 12px;
+    }
+
+    ._header_nav ._logo_wrap,
+    ._header_nav .ms-auto {
+        width: 100%;
+    }
+
+    ._header_nav ._logo_wrap {
+        display: flex;
+        justify-content: flex-start;
+    }
+
+    ._header_nav .ms-auto {
+        justify-content: space-between !important;
+    }
+
+    ._nav_logo {
+        max-width: 140px;
+    }
+
+  ._social_login_left_image img,
+  ._social_registration_right_image img,
+  ._social_registration_right_image_dark img {
+    max-width: 100%;
+    height: auto;
+  }
+
+  ._social_login_content,
+  ._social_registration_content {
+    max-width: 560px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+@media (max-width: 767px) {
+  ._social_login_wrapper,
+  ._social_registration_wrapper {
+    padding: 24px 0;
+  }
+
+    ._layout._layout_main_wrapper {
+        padding-top: 72px !important;
+    }
+
+    ._header_nav .ms-auto {
+        gap: 10px !important;
+    }
+
+    ._header_nav .ms-auto .fw-semibold {
+        flex: 1 1 auto;
+        min-width: 0;
+        line-height: 1.2;
+    }
+
+    ._header_nav .btn.btn-outline-dark.btn-sm {
+        flex: 0 0 auto;
+    }
+
+  ._social_login_content,
+  ._social_registration_content {
+    margin-top: 16px;
+    padding-left: 8px;
+    padding-right: 8px;
+  }
+
+  ._social_login_content_title,
+  ._social_registration_content_title {
+    margin-bottom: 24px !important;
+  }
+
+  ._social_login_form_btn,
+  ._social_registration_form_btn {
+    margin-top: 24px !important;
+    margin-bottom: 24px !important;
+  }
+
+  ._social_login_form_btn_link,
+  ._social_registration_form_btn_link {
+    width: 100%;
+  }
+
+  ._feed_inner_text_area,
+  ._feed_inner_timeline_post_area {
+    padding-left: 16px !important;
+    padding-right: 16px !important;
+  }
+
+  ._feed_inner_timeline_content {
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+  }
+
+  ._feed_inner_timeline_post_top {
+    align-items: flex-start !important;
+  }
+
+  ._feed_inner_timeline_post_box {
+    align-items: flex-start !important;
+  }
+
+  ._feed_inner_timeline_post_box_txt {
+    min-width: 0;
+  }
+
+  ._feed_inner_timeline_post_box_title,
+  ._feed_inner_timeline_post_box_para,
+  .text-muted,
+  small {
+    word-break: break-word;
+    overflow-wrap: anywhere;
+  }
+
+  ._feed_inner_text_area_btn_link,
+  .btn.btn-outline-dark,
+  .btn.btn-dark {
+    white-space: nowrap;
+  }
+
+  .border.rounded.p-3.mt-3.bg-white {
+    padding: 12px !important;
+  }
+
+  .mt-3.ps-3.border-start {
+    padding-left: 12px !important;
+  }
+
+  .comment-submit-btn {
+    width: 100%;
+  }
+}
+
+@media (max-width: 575px) {
+  .container {
+    padding-left: 14px;
+    padding-right: 14px;
+  }
+
+  ._social_login_content_para,
+  ._social_registration_content_para {
+    font-size: 14px;
+  }
+
+  ._social_login_content_title,
+  ._social_registration_content_title {
+    font-size: 26px;
+    line-height: 1.25;
+  }
+
+  ._social_login_input,
+  ._social_registration_input,
+  .form-control,
+  .form-select {
+    font-size: 16px;
+  }
+
+  ._feed_inner_text_area_box {
+    display: block !important;
+  }
+
+  ._feed_inner_text_area_box_image {
+    margin-bottom: 12px;
+  }
+
+  ._txt_img {
+    width: 44px;
+    height: 44px;
+    object-fit: cover;
+  }
+
+  ._post_img {
+    width: 44px;
+    height: 44px;
+    object-fit: cover;
+  }
+
+  ._feed_inner_timeline_post_box {
+    gap: 10px !important;
+  }
+
+  ._feed_inner_timeline_post_box_title {
+    font-size: 16px;
+    line-height: 1.3;
+  }
+
+  ._feed_inner_timeline_post_box_para {
+    font-size: 13px;
+    line-height: 1.4;
+  }
+
+  ._feed_inner_text_area_btn_link {
+    width: 100%;
+    text-align: center;
+  }
+}
+
+@media (max-width: 420px) {
+  ._social_login_content,
+  ._social_registration_content {
+    padding-left: 0;
+    padding-right: 0;
+  }
+
+  ._feed_inner_text_area,
+  ._feed_inner_timeline_post_area {
+    padding-left: 12px !important;
+    padding-right: 12px !important;
+  }
+
+  ._feed_inner_timeline_post_box_title {
+    font-size: 15px;
+  }
+
+  ._feed_inner_timeline_post_box_para {
+    font-size: 12px;
+  }
+}
 @media(max-width:355px) {
     ._feed_inner_timeline_reaction_link {
         font-size: 12px;
@@ -341,10 +579,6 @@
         display: none;
     }
     ._shape_two {
-        display: none;
-    }
-    /*--- Desktop Menu ---- */
-    ._header_nav {
         display: none;
     }
     ._layout_mode_swithing_btn {

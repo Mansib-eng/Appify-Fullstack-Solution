@@ -69,7 +69,7 @@ export default function RegisterForm() {
   return (
     <form className="_social_registration_form" onSubmit={handleSubmit}>
       <div className="row">
-        <div className="col-6">
+        <div className="col-md-6 col-12">
           <div className="_social_registration_form_input _mar_b14">
             <label className="_social_registration_label _mar_b8">First Name</label>
             <input
@@ -82,7 +82,7 @@ export default function RegisterForm() {
             />
           </div>
         </div>
-        <div className="col-6">
+        <div className="col-md-6 col-12">
           <div className="_social_registration_form_input _mar_b14">
             <label className="_social_registration_label _mar_b8">Last Name</label>
             <input
