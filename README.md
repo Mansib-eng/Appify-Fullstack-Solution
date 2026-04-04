@@ -145,8 +145,7 @@ Use **MongoDB Atlas** free tier for the database.
 - Feed design was kept close to the supplied assets, while feed functionality was prioritized as allowed by the task
 - Pagination and indexing were added to better align the solution with scalability expectations
 
-## Deliverables
-This repository is intended to be submitted with:
-- GitHub repository link
-- Live deployed URL
-- Unlisted/private YouTube walkthrough
+## Submission Links
+- **GitHub Repository:** [Appify Fullstack Solution](https://github.com/Mansib-eng/Appify-Fullstack-Solution)
+- **Live Application:** [appify-fullstack-solution.vercel.app](https://appify-fullstack-solution.vercel.app)
+- **YouTube Walkthrough (Unlisted):** [Watch here](https://youtu.be/Sp_XJMdrD3c)
